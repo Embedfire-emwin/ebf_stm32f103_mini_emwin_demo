@@ -107,8 +107,8 @@ extern "C" {     /* Make sure we have C-declarations in C++ programs */
 #define CIRCLE_RADIUS     100
 #define LOGO_DIST_BORDER  5
 #define CHAR_READING_TIME 80
-#define XSIZE_MIN         320
-#define YSIZE_MIN         240
+#define XSIZE_MIN         240
+#define YSIZE_MIN         320
 
 //
 // Use an or-combination of the following flags to configure the
