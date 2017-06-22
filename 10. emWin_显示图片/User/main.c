@@ -52,6 +52,8 @@ int main(void)
 	/* LED 端口初始化 */
 	LED_GPIO_Config();	
 	
+	Key_GPIO_Config();
+	
 	XPT2046_Init();
   
   /* 初始化定时器 */

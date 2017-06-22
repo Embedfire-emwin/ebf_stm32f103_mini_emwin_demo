@@ -30,8 +30,8 @@ BYTE buffer[512]={0};       		  /* file copy buffer */
 char utf8_buffer[512*2]={0};       		  /* file copy buffer */
 BYTE textFileBuffer[] = "欢迎使用秉火MINI开发板，这是一个使用XBF字体显示的例子，本例子支持中文显示。";
 
-//要测试的磁盘号，0为spi，1为sd卡
-char disk_num[] = "0:";
+//要测试的磁盘号，0为sd卡，1为spi
+char disk_num[] = "1:";
 
 
 
