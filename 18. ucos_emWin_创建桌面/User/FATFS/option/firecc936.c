@@ -13,7 +13,7 @@
 #endif
 
 #define UGBKSIZE 	174344
-#define UGBKADDR		466*4096
+#define UGBKADDR		470*4096
 
 WCHAR ff_convert (	/* Converted code, 0 means conversion error */
 	WCHAR	src,	/* Character code to be converted */

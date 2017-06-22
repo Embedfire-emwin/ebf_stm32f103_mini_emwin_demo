@@ -38,7 +38,7 @@
 //#endif
 
 //SPI FLASH存储触摸校准数据的位置
-#define CALADD  				(510*4096)
+#define CALADD  				(513*4096)
 #define CALADD_FLAG		0x55
 
 extern unsigned char IsCal ;
