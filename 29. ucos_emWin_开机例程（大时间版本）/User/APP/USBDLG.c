@@ -193,7 +193,7 @@ static void _cbDialogUSB(WM_MESSAGE * pMsg) {
 *
 *       CreateUSB
 */
-void FUN_ICON6Clicked(void)
+void FUN_ICON6Clicked_not_used(void)
 {
 	WM_HWIN hWin;	
 

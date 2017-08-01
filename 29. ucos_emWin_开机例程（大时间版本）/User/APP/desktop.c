@@ -84,17 +84,22 @@ uint8_t ICON_Clicked[12]   = {0};   /* ICONVIEW¿Ø¼þ°´ÏÂµÄ±êÖ¾£¬0±íÊ¾Î´°´ÏÂ£¬1±íÊ
 extern struct rtc_time systmtime;
 
 
+#define UTF8_ICONERROR        "\xe6\x9c\xac\xe5\x9b\xbe\xe6\xa0\x87\xe4\xbb\x85\xe7\x94\xa8\xe4\xba\x8e\xe6\xa1\x8c\xe9\x9d\xa2\xe5\xaf\xb9\xe9\xbd\x90"//±¾Í¼±ê½öÓÃÓÚ×ÀÃæ¶ÔÆë
+#define UTF8_ICONERROR1       "\xe4\xb8\x8d\xe6\x8f\x90\xe4\xbe\x9b\xe5\xba\x94\xe7\x94\xa8\xe5\x8a\x9f\xe8\x83\xbd"//²»Ìá¹©Ó¦ÓÃ¹¦ÄÜ£¬¿É×ÔÐÐ±àÐ´³ÌÐò
+
+
 /*µã»÷Í¼±êºóÖ´ÐÐµÄº¯Êý*/
 extern void FUN_ICON0Clicked(void); 
 extern void FUN_ICON1Clicked(void);  
 extern void FUN_ICON2Clicked(void);  
 extern void FUN_ICON3Clicked(void);  
 extern void FUN_ICON4Clicked(void);  
-//void FUN_ICON4Clicked(void)  {printf("FUN_ICON5Clicked\n");}
 extern void FUN_ICON5Clicked(void);  
-//void FUN_ICON5Clicked(void)  {printf("FUN_ICON5Clicked\n");}
-extern void FUN_ICON6Clicked(void);  
-//void FUN_ICON6Clicked(void)  {printf("FUN_ICON5Clicked\n");}
+ void FUN_ICON6Clicked(void)
+{
+	ErrorDialog(WM_HBKWIN,UTF8_ICONERROR,UTF8_ICONERROR1);
+	printf("FUN_ICON8Clicked\n");
+}
 extern void FUN_ICON7Clicked(void);  
 
 void FUN_ICON8Clicked(void)  {printf("FUN_ICON8Clicked\n");}
