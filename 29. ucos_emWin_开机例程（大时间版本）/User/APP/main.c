@@ -147,6 +147,10 @@ static  void  AppTaskStart (void *p_arg)
 
 	//创建驱动任务
 	BSPTaskCreate();
+	
+					OSTimeDly(500u, 
+									OS_OPT_TIME_DLY,
+									&os_err);
 	//创建应用任务
 	AppTaskCreate();  
 
