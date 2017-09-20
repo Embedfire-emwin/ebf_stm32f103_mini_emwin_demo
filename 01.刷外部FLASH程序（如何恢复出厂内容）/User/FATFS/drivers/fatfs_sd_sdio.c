@@ -1041,7 +1041,7 @@ DRESULT TM_FATFS_SD_SDIO_disk_read(BYTE *buff, DWORD sector, UINT count)
 		return res;
 	}
 
-	Status = SD_ReadMultiBlocks(buff, sector << 9, BLOCK_SIZE, count);
+	Status = SD_ReadMultiBlocks(buff, (uint64_t)sector << 9, BLOCK_SIZE, count);
 
 	if (Status == SD_RESPONSE_NO_ERROR) {
 			return RES_OK;	
@@ -1080,7 +1080,7 @@ DRESULT TM_FATFS_SD_SDIO_disk_write(BYTE *buff, DWORD sector, UINT count)
 		return(res);
 	}
 
-	Status = SD_WriteMultiBlocks((uint8_t *)buff, sector << 9, BLOCK_SIZE, count); // 4GB Compliant
+	Status = SD_WriteMultiBlocks((uint8_t *)buff, (uint64_t)sector << 9, BLOCK_SIZE, count); // 4GB Compliant
 
 	if (Status == SD_RESPONSE_NO_ERROR) {
 			return RES_OK;
