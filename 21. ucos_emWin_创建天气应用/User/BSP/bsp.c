@@ -427,12 +427,13 @@ void BSP_Init(void)
 	WM_SetCreateFlags(WM_CF_MEMDEV);
 
 	/* 初始化GUI */
+  ILI9341_Init();   /* 提前初始化LCD驱动，在GUI_Init调用LCD_X_Config之前确认LCD驱动芯片ID: lcdid */
   if(GUI_Init()!=0) 
 	{
 		bsp_result |= BSP_GUI;  
 	}
 	
-	if (ILI9341_Read_ID() != 0x9341)
+	if( !(lcdid != LCDID_ILI9341) || (lcdid != LCDID_ST7789V) ) //判断是否检测到LCD ID
 	{
 		bsp_result |= BSP_LCD;  
 	}

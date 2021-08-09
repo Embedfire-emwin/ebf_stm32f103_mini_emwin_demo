@@ -69,6 +69,7 @@
 #include "./usart/bsp_usart.h"
 #include "./led/bsp_led.h"
 #include "./key/bsp_key.h"  
+#include "./lcd/bsp_ili9341_lcd.h"
 
 #include "ff.h"
 

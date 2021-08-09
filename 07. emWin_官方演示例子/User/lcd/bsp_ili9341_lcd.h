@@ -74,6 +74,8 @@ extern uint16_t LCD_X_LENGTH,LCD_Y_LENGTH;
 //参数可选值为0-7
 extern uint8_t LCD_SCAN_MODE;
 
+extern uint16_t lcdid;
+
 /******************************* 定义 ILI934 显示屏常用颜色 ********************************/
 #define      BACKGROUND		                BLACK   //默认背景颜色
 
@@ -99,6 +101,10 @@ extern uint8_t LCD_SCAN_MODE;
 #define      CMD_SetPixel		 		          0x2C	     //填充像素
 
 
+/* 定义 LCD 驱动芯片 ID */
+#define     LCDID_UNKNOWN             0
+#define     LCDID_ILI9341             0x9341
+#define     LCDID_ST7789V             0x8552
 
 
 /********************************** 声明 ILI934 函数 ***************************************/
@@ -125,7 +131,7 @@ void 											LCD_SetBackColor								(uint16_t Color);
 void 											LCD_SetTextColor								(uint16_t Color)	;
 void 											LCD_SetColors										(uint16_t TextColor, uint16_t BackColor);
 void 											LCD_GetColors										(uint16_t *TextColor, uint16_t *BackColor);
-uint16_t 								ILI9341_Read_ID									(void);
+uint16_t 								ILI9341_ReadID									(void);
 
 
 __inline void                 ILI9341_Write_Cmd           ( uint16_t usCmd );

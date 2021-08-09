@@ -77,6 +77,7 @@
 
 #include "./led/bsp_led.h"           
 #include "./usart/bsp_usart.h"
+#include "./lcd/bsp_ili9341_lcd.h"
 
 
 /*
